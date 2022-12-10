@@ -29,7 +29,7 @@ public class CheckJadwalBentrokKELRAFAEL {
         assertEquals(4,CheckJadwalBentrokKELRAFAEL.hari("kamis"));
         assertEquals(5,CheckJadwalBentrokKELRAFAEL.hari("jumat"));
 //        assertEquals(2,CheckJadwalBentrokKELRAFAEL.hari("senin"));
-        
+        //bikin comment
         boolean arr[][] = new boolean {[true, false], [false, false]};
 
 assertEquals(false, 1,CheckJadwalBentrokKELRAFAEL.cekJadwal(new boolean[][] {"true", "false"} , {"false", "true"}));
