@@ -1,4 +1,10 @@
 /*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package testingluluskelraf;
+
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -7,14 +13,15 @@
 /**
  *
  * @author Asus
- */
+ *
 
 /**
  *
  * @author hp
  */
 import java.util.Scanner;
-public class CheckLulusKELRAFAEL{
+import static org.junit.Assert.assertEquals;
+public class TestingLulusKelRaf{
 
     /**
      * @param args the command line arguments
@@ -32,7 +39,7 @@ public class CheckLulusKELRAFAEL{
         System.out.println("3. Pemograman Berbasis Web");
         System.out.println("4. Pemograman Pada Perangkat Lunak");
         System.out.println("5. Rekayasa Perangkat Lunak");
-        Jadwal_MataKuliah=sc.nextInt () ; 
+        Jadwal_MataKuliah = sc.nextInt () ; 
         switch(Jadwal_MataKuliah){
             case 1:
                 System.out.println("Minimun nilai B");
@@ -63,40 +70,49 @@ public class CheckLulusKELRAFAEL{
         System.out.println("8. D");
         System.out.println("9. E");        
         Nilai_MataKuliah=sc.nextInt();
-        switch(Nilai_MataKuliah){
-            case 1:
-                System.out.println("Lulus");
-                break;
-            case 2:
-                System.out.println("Lulus");
-                break;
-            case 3:
-                System.out.println("Lulus");
-                break;
-            case 4:
-                System.out.println("Lulus");
-                break;
-            case 5:
-                System.out.println("Tidak Lulus");
-                break;
-            case 6:
-                System.out.println("Tidak Lulus");
-                break;
-            case 7:
-                System.out.println("Tidak Lulus");
-                break;
-            case 8:
-                System.out.println("Tidak Lulus");
-                break;
-            case 9:
-                System.out.println("Tidak Lulus");
-                break;    
-            default:
-                System.out.println("Silahkan Pilih 1,2,3,4,5,6,7,8,9");
-                break;
-        }        
+            
         num++;
         }
+        
+        assertEquals("Lulus",TestingLulusKelRaf.cekLulus(1, 1));
+
+    }
+    
+    public String cekLulus (int jadwalMatKul, int nilaiMatKul)
+    {
+        String res = "";
+        switch(nilaiMatKul){
+            case 1:
+                res = "Lulus";
+                break;
+            case 2:
+                res = "Lulus";
+                break;
+            case 3:
+                res = "Lulus";
+                break;
+            case 4:
+                res = "Lulus";
+                break;
+            case 5:
+                res = "Tidak Lulus";
+                break;
+            case 6:
+                res = "Tidak Lulus";
+                break;
+            case 7:
+                res = "Tidak Lulus";
+                break;
+            case 8:
+                res = "Tidak Lulus";
+                break;
+            case 9:
+                res = "Tidak Lulus";
+                break;    
+            default:
+                res = "Silahkan Pilih 1,2,3,4,5,6,7,8,9";
+                break;
+        }  
+        return res;
     }
 }
-

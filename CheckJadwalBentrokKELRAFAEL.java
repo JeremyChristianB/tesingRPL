@@ -1,4 +1,10 @@
 /*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package testingbentrokjadwalkelraf;
+
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -8,35 +14,27 @@
  *
  * @author Asus
  */
-/**
- *
- * @author hp
- */
+
 
 import static org.junit.Assert.*;   
 import org.junit.Test;  
 
+import java.util.Arrays;
 import java.util.Scanner;
-public class CheckJadwalBentrokKELRAFAEL {   
+public class TestingJadwalKelRaf {   
     
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        assertEquals(1,CheckJadwalBentrokKELRAFAEL.hari("senin"));
-        assertEquals(2,CheckJadwalBentrokKELRAFAEL.hari("selasa"));
-        assertEquals(3,CheckJadwalBentrokKELRAFAEL.hari("rabu"));
-        assertEquals(4,CheckJadwalBentrokKELRAFAEL.hari("kamis"));
-        assertEquals(5,CheckJadwalBentrokKELRAFAEL.hari("jumat"));
-//        assertEquals(2,CheckJadwalBentrokKELRAFAEL.hari("senin"));
-        //bikin comment
-        boolean arr[][] = new boolean {[true, false], [false, false]};
-
-assertEquals(false, 1,CheckJadwalBentrokKELRAFAEL.cekJadwal(new boolean[][] {"true", "false"} , {"false", "true"}));
-        
-        
-        
- assertEquals(4,Calculation.findMax(new int[]{1,3,4,2}));  
+        assertEquals(1,TestingJadwalKelRaf.hari("senin"));
+        assertEquals(2,TestingJadwalKelRaf.hari("selasa"));
+        assertEquals(3,TestingJadwalKelRaf.hari("rabu"));
+        assertEquals(4,TestingJadwalKelRaf.hari("kamis"));
+        assertEquals(5,TestingJadwalKelRaf.hari("jumat"));
+        //assertEquals(2,CheckJadwalBentrokKELRAFAEL.hari("senin"));
+        boolean [][]jadwal = new boolean [5][18];
+        assertEquals(false,TestingJadwalKelRaf.cekJadwal(jadwal[1][8], 1));
     }
     public static boolean cekJadwal(boolean jadwal[][],int matkul){
         boolean res = true;
@@ -108,6 +106,3 @@ assertEquals(false, 1,CheckJadwalBentrokKELRAFAEL.cekJadwal(new boolean[][] {"tr
     }
    
 } 
-
-       
-
