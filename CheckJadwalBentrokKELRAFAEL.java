@@ -22,21 +22,34 @@ public class CheckJadwalBentrokKELRAFAEL {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) {        
+
+//test1
         assertEquals(1,CheckJadwalBentrokKELRAFAEL.hari("senin"));
         assertEquals(2,CheckJadwalBentrokKELRAFAEL.hari("selasa"));
         assertEquals(3,CheckJadwalBentrokKELRAFAEL.hari("rabu"));
         assertEquals(4,CheckJadwalBentrokKELRAFAEL.hari("kamis"));
         assertEquals(5,CheckJadwalBentrokKELRAFAEL.hari("jumat"));
+ 
+//test2        
+//kalo mau gagal
 //        assertEquals(2,CheckJadwalBentrokKELRAFAEL.hari("senin"));
         
-        boolean arr[][] = new boolean {[true, false], [false, false]};
+        int[][] nama = new int[5][5];
+        
+        boolean[][] arr = new boolean [5][18];
 
-assertEquals(false, 1,CheckJadwalBentrokKELRAFAEL.cekJadwal(new boolean[][] {"true", "false"} , {"false", "true"}));
+        assertEquals(true,CheckJadwalBentrokKELRAFAEL.cekJadwal(arr, 1));
         
-        
-        
- assertEquals(4,Calculation.findMax(new int[]{1,3,4,2}));  
+//kalo mau gagal
+//      assertEquals(false,CheckJadwalBentrokKELRAFAEL.cekJadwal(arr, 1));
+      
+
+//tidak dapat dilakukan testing untuk method jadwalKosong dikarenakan bertipe void
+//telah dicoba dilakukan perubahan pada source code asli namun gagal sehingga tidak dapat dilakukan testing
+//        boolean[][] arr2 = new boolean [5][20];
+//        assertEquals(false,CheckJadwalBentrokKELRAFAEL.jadwalKosong(arr));
+
     }
     public static boolean cekJadwal(boolean jadwal[][],int matkul){
         boolean res = true;
@@ -82,13 +95,26 @@ assertEquals(false, 1,CheckJadwalBentrokKELRAFAEL.cekJadwal(new boolean[][] {"tr
         }
         return res;
     }
-    public static void jadwalKosong(boolean jadwal[][]){
+        public static void jadwalKosong(boolean jadwal[][]){
         for(int i=0;i<5;i++){
             for(int j=0;j<20;j++){
                 jadwal[i][j]=false;
             }
         }
     }
+        
+//source code editan
+//    public static boolean[][] jadwalKosong(boolean jadwal[][]){
+//        for(int i=0;i<jadwal.length();i++){
+//            for(int j=0;j<jadwal.length();j++){
+//                jadwal[i][j]=false;
+//                
+//            }
+//        }
+//        return jadwal;
+//    }
+        
+ //source code asli       
     public static int hari(String namaHari){
         if(namaHari.equals("senin")){
             return 1;
