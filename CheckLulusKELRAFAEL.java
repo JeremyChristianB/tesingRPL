@@ -28,60 +28,67 @@ public class TestingLulusKelRaf{
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Scanner sc = new Scanner(System.in);
-        int num = 0;
-        int Jadwal_MataKuliah;
-        int Nilai_MataKuliah;     
-        while(num <= 1){       
-        System.out.println("Silahkan pilih mata kuliah:");
-        System.out.println("1. Dasar-dasar Pemograman");
-        System.out.println("2. Analisis Struktur Data");
-        System.out.println("3. Pemograman Berbasis Web");
-        System.out.println("4. Pemograman Pada Perangkat Lunak");
-        System.out.println("5. Rekayasa Perangkat Lunak");
-        Jadwal_MataKuliah = sc.nextInt () ; 
-        switch(Jadwal_MataKuliah){
-            case 1:
-                System.out.println("Minimun nilai B");
-                break;
-            case 2:
-                System.out.println("Minimun nilai B");
-                break;
-            case 3:
-                System.out.println("Minimun nilai B");
-                break;
-            case 4:
-                System.out.println("Minimun nilai B");
-                break;
-            case 5:
-                System.out.println("Minimun nilai B");
-                break;
-            default:
-                System.out.println("Silahkan Pilih 1,2,3,4,5");           
-            }
-        System.out.println("Silahkan Masukan Nilai:");
-        System.out.println("1. A");
-        System.out.println("2. A-");
-        System.out.println("3. B+");
-        System.out.println("4. B");
-        System.out.println("5. B-");
-        System.out.println("6. C+");
-        System.out.println("7. C");
-        System.out.println("8. D");
-        System.out.println("9. E");        
-        Nilai_MataKuliah=sc.nextInt();
-            
-        num++;
-        }
+//        Scanner sc = new Scanner(System.in);
+//        int num = 0;
+//        int Jadwal_MataKuliah;
+//        int Nilai_MataKuliah;     
+//        while(num <= 1){       
+//        System.out.println("Silahkan pilih mata kuliah:");
+//        System.out.println("1. Dasar-dasar Pemograman");
+//        System.out.println("2. Analisis Struktur Data");
+//        System.out.println("3. Pemograman Berbasis Web");
+//        System.out.println("4. Pemograman Pada Perangkat Lunak");
+//        System.out.println("5. Rekayasa Perangkat Lunak");
+//        Jadwal_MataKuliah = sc.nextInt () ; 
+//        switch(Jadwal_MataKuliah){
+//            case 1:
+//                System.out.println("Minimun nilai B");
+//                break;
+//            case 2:
+//                System.out.println("Minimun nilai B");
+//                break;
+//            case 3:
+//                System.out.println("Minimun nilai B");
+//                break;
+//            case 4:
+//                System.out.println("Minimun nilai B");
+//                break;
+//            case 5:
+//                System.out.println("Minimun nilai B");
+//                break;
+//            default:
+//                System.out.println("Silahkan Pilih 1,2,3,4,5");           
+//            }
+//        System.out.println("Silahkan Masukan Nilai:");
+//        System.out.println("1. A");
+//        System.out.println("2. A-");
+//        System.out.println("3. B+");
+//        System.out.println("4. B");
+//        System.out.println("5. B-");
+//        System.out.println("6. C+");
+//        System.out.println("7. C");
+//        System.out.println("8. D");
+//        System.out.println("9. E");        
+//        Nilai_MataKuliah=sc.nextInt();
+//            
+//        num++;
+//        }
+//        
+        assertEquals("Lulus",TestingLulusKelRaf.cekLulus(1));
+        assertEquals("Lulus",TestingLulusKelRaf.cekLulus(2));
+        assertEquals("Lulus",TestingLulusKelRaf.cekLulus(3));
+        assertEquals("Lulus",TestingLulusKelRaf.cekLulus(4));
+        assertEquals("Tidak Lulus",TestingLulusKelRaf.cekLulus(5));
+        assertEquals("Tidak Lulus",TestingLulusKelRaf.cekLulus(6));
+        assertEquals("Tidak Lulus",TestingLulusKelRaf.cekLulus(7));
+        assertEquals("Tidak Lulus",TestingLulusKelRaf.cekLulus(8));
         
-        assertEquals("Lulus",TestingLulusKelRaf.cekLulus(1, 1));
-
     }
     
-    public String cekLulus (int jadwalMatKul, int nilaiMatKul)
+    public static String cekLulus (int nilaiMatkul)
     {
         String res = "";
-        switch(nilaiMatKul){
+        switch(nilaiMatkul){
             case 1:
                 res = "Lulus";
                 break;
